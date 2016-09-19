@@ -1,0 +1,111 @@
+* body {
+	font-family: 'Lato', sans-serif;
+}
+
+#logo {
+	margin: -40px 0 -40px 0;
+}
+
+#navbar a {
+	color: black;
+	padding: 25px 10px 25px 10px;
+}
+
+.navbar {
+  z-index: 9999;
+  background-color: white;
+}
+
+.navbar-toggle {
+	background-color: black;
+}
+
+.main-photo {
+	background-image: url('../img/imac2.jpg');
+	background-position: 50% 50%!important;
+    background-size: cover!important;
+    height: 80vh;
+    width: 100%;
+}
+
+.about-us h1 {
+	padding-top: 150px;
+	text-align: center;
+}
+
+.about-us p {
+	margin: auto;
+	text-align: center;
+	width: 60%;
+}
+
+.img-responsive {
+	margin: auto;
+}
+
+.parent {
+	display: -webkit-box;
+	display: -webkit-flex;
+	justify-content: center;
+	padding: 150px 0 100px 0;
+}
+
+.responsive, .languages, .something {
+	width: 25%;
+	text-align: center;
+}
+
+hr {
+	height: 1px;
+	width: 100px;
+	color: black;
+	background-color: black;
+}
+
+.portfolio h1 {
+	padding-top: 150px;
+	text-align: center;
+}
+
+#projects {
+	 background-color: #f0f0f0;
+}
+
+.parent2 {
+	display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+   -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project img {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  width: 320px;
+}
+
+.project {
+	padding: 1em .5em 1em .5em;
+}
+
+.content {
+	width: 320px;
+  padding: 1em;
+  border: 1px solid grey;
+}
+
+
+@media (max-width: 992px) {
+.parent h3 {
+	font-size: 1.2em;
+}
+}
+
+
+
