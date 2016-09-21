@@ -10,6 +10,11 @@ $(document).ready(function(){
     });
     return false;
   });
+<<<<<<< HEAD
   
 });
  
+=======
+
+});
+>>>>>>> b622b14cfa97b25b5f1379147f72c54d5c256501
