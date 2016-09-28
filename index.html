@@ -120,7 +120,19 @@
 			</h1>
 			<hr>
 		</div>
-		
+		<div class="form">
+			<form name="form" method="POST" id="contactform">
+				<input type="hidden" name="_next" value="//luismeza.io/thanks.html">
+				<input type="hidden" name="_subject" value="luismeza.io contact form">
+				<input type="text" name="_gotcha" style="display:none">
+  			<input type="text" minlength="4" placeholder="Your Name" name="name" class="form-control" id="name">
+  			<input type="email" name="_replyto" minlength="5" placeholder="Your Email" class="form-control" id="email" required="required">
+  			<textarea minlength="15" style="resize:none" cols="40" rows="5" class="form-control" placeholder="Hey, you're awesome I want to hire you!" required="required" name="message" id="message-box"></textarea>
+	  		<button type="submit" class="btn btn-success" name="submit" id="submit">
+	  			Submit
+	  		</button>
+	 		</form> 
+		</div>
 		<footer>
 			<div class="social-media">
 				<a href="https://twitter.com/THELuisMeza" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @THELuisMeza</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
