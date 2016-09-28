@@ -10,9 +10,9 @@ $(document).ready(function(){
     });
     return false;
   });
+  var contactform = document.getElementById('contactform');
+    contactform.setAttribute('action', '//formspree.io/' + 'luis' + 'meza01' + '@' + 'gmail' + '.' + 'com');
 });
 
-var contactform = document.getElementById('contactform');
-  
-contactform.setAttribute('action', '//formspree.io/' + 'luis' + 'meza01' + '@' + 'gmail' + '.' + 'com');
+
 
