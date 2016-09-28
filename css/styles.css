@@ -69,7 +69,7 @@
 		margin: auto;
 	}
 
-	.parent, .parent2 {
+	.parent, .parent2, .form {
 		display: -webkit-box;
 	  display: -webkit-flex;
 	  display: -ms-flexbox;
@@ -77,6 +77,9 @@
 	   -webkit-flex-wrap: wrap;
 	      -ms-flex-wrap: wrap;
 	          flex-wrap: wrap;
+	}
+
+	.parent, .parent2 {
 	  justify-content: center;
 	}
 
@@ -121,34 +124,29 @@
 	  -moz-box-shadow: 4px 4px 5px #888888;
 	  -webkit-box-shadow: 4px 4px 5px #888888;
 	}
-/*
-	.content {
-		width: 250px;
-		height: 100px;
-	  padding: 1em;
-	  border: 1px solid grey;
-	  box-shadow: 4px 4px 5px #888888;
-	  -moz-box-shadow: 4px 4px 5px #888888;
-	  -webkit-box-shadow: 4px 4px 5px #888888;
-	}*/
 
 	.project {
 		padding: 1em .5em 1em .5em;
 
 	}
+
+	.contact-header {
+		margin-top: 8em;
+		text-align: center;
+	}
 }
 
 @media (min-width: 568px) {
-		p {
-			font-size: 1em;
-		}
-		.main-photo {
-			padding-top: 0;
-		}	
-		.parent p {
-			margin: auto;
-			width: 50%;
-		}		
+	p {
+		font-size: 1em;
+	}
+	.main-photo {
+		padding-top: 0;
+	}	
+	.parent p {
+		margin: auto;
+		width: 50%;
+	}		
 }
 
 @media (min-width: 667px) {
@@ -171,13 +169,64 @@
 	  width: 350px;
 	}
 
-	.content {
-		width: 350px;
-		height: 100px;
-	  padding: 1em;
-	  border: 1px solid grey;
+	.about-us {
+		margin-bottom: 8em;
+	}
+
+	.about-us p {
+		font-size: 1.3em;
+	}
+
+	.parent {
+		margin-bottom: 8em;
 	}
 }
+
+@media (min-width: 1022px) {
+	.project img {
+	  margin: 2em;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 header {
 	position: fixed;
@@ -280,12 +329,6 @@ hr {
 
 .project {
 	padding: 1em .5em 1em .5em;
-}
-
-.content {
-	width: 320px;
-  padding: 1em;
-  border: 1px solid grey;
 }
 }*/
 
