@@ -39,7 +39,7 @@
 		</nav>
 		<div class="site-overlay">
 		</div>
-		<div class="total-body">
+		<div class="total-body" id="container">
 			<div class="main-photo">
 				<img src="img/imac2.jpg" class="img-responsive">
 			</div>
@@ -50,7 +50,7 @@
 					</h1>
 					<hr>
 					<p>
-						I'm a Junior Web Developer seeking new opportunities. I love learning new and different approaches to solve coding problems while drinking a luke warm cup of coffee. 
+						I'm a Junior Web Developer seeking new opportunities. I love learning new and different approaches to solve coding problems while drinking a luke warm cup of coffee.
 					</p>
 				</div>
 				<div class="parent">
@@ -60,21 +60,22 @@
 							RESPONSIVE DESIGN
 						</h3>
 						<p>
-							Having a responsive layout is crucial to the overall look and feel to grab the users attention regardless of device. 
+							Responsive design is crucial to grab the users attention. I achieve this regardless of device.
 						</p>
 					</div>
 					<div class="languages">
-						<img src="img/devs.png" class="img-responsive" alt="html css js logo" id="responsive">
+						<div class="images">
+						</div>
 						<h3>
-							CORE LANGUAGES 
+							CORE LANGUAGES
 						</h3>
 						<p>
-							Using the core of HTML CSS and Javascript I can create unique websites. 
+							Using the core of HTML CSS and Javascript I can create unique websites.
 						</p>
 					</div>
 					<div class="something">
 						<img src="" class="img-responsive" alt="something">
-						<h3> 
+						<h3>
 							SOMETHING
 						</h3>
 						<p>
@@ -87,7 +88,7 @@
 				<div class="portfolio">
 					<h1>
 						PORTFOLIO
-					</h1>	
+					</h1>
 					<hr>
 				</div>
 				<div class="parent2" id="project">
@@ -113,31 +114,37 @@
 					</div>
 				</div>
 			</div>
-			<div class="contact-header" id="contact">
-				<h1> 
-				CONTACT 
-				</h1>
-				<hr>
-			</div>
-			<div class="form">
-				<form name="form" method="POST" id="contactform">
-					<input type="hidden" name="_next" value="//luismeza.io/thanks.html">
-					<input type="hidden" name="_subject" value="luismeza.io contact form">
-					<input type="text" name="_gotcha" style="display:none">
-					<input type="text" minlength="4" placeholder="Your Name" name="name" class="form-control" id="name">
-					<input type="email" name="_replyto" minlength="5" placeholder="Your Email" class="form-control" id="email" required="required">
-					<textarea minlength="15" style="resize:none" cols="40" rows="5" class="form-control" placeholder="Hey, you're awesome I want to hire you!" required="required" name="message" id="message-box"></textarea>
-					<button type="submit" class="btn btn-success" name="submit" id="submit">
-					Submit
-					</button>
-				</form> 
-			</div>
 			<footer>
-				<div class="social-media">
-					<a href="https://twitter.com/THELuisMeza" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @THELuisMeza</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<div id="map"></div>
+				<div class="contact-header" id="contact">
+					<h1>
+					CONTACT
+					</h1>
+					<hr>
 				</div>
-				<div class="copyright">
-					&copy; Meza 2016
+				<div class="form">
+					<form name="form" method="POST" id="contactform">
+						<input type="hidden" name="_next" value="http://luis.bitballoon.com/thanks.html">
+						<input type="hidden" name="_subject" value="luismeza.io contact form">
+						<input type="text" name="_gotcha" style="display:none">
+						<input type="text" minlength="4" placeholder="Your Name" name="name" class="form-control" id="name">
+						<input type="email" name="_replyto" minlength="5" placeholder="Your Email" class="form-control" id="email" required="required">
+						<textarea minlength="15" style="resize:none" cols="40" rows="5" class="form-control" placeholder="Hey, you're awesome I want to hire you!" required="required" name="message" id="message-box"></textarea>
+						<button type="submit" class="btn btn-success" name="submit" id="submit">
+							<img src="img/mail.png" class="img-responsive" alt="mail logo"/>
+							<!-- paper plane by Dmitry Kovalev from the Noun Project -->
+						</button>
+					</form>
+				</div>
+				<div class="links">
+					<div class="copyright">
+						&copy; Meza 2016
+					</div>
+					<div class="social-media">
+						<a href="http://twitter.com/THELuisMeza"><img src="img/twitter.png" class="twitter"/></a>
+						<a href="http://github.com/lm1435"><img src="img/github.png"/></a>
+						<a href="http://linkedin.com/in/mezaluisadrian"><img src="img/in.png"/></a>
+					</div>
 				</div>
 			</footer>
 		</div>
@@ -151,5 +158,7 @@
 		</script>
 		<script src="js/scripts.js">
 		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJMq5juRugIj_gCTwsBZ1-7SOBSS0knxo&callback=initMap"
+    async defer></script>
 	</body>
 </html>

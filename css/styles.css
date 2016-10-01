@@ -4,10 +4,6 @@
 
 @media (min-width: 320px) {
 
-	p, .title {
-		font-size: 1.2em;
-	}
-
 	header {
 		position: fixed;
 	  top: 0;
@@ -39,19 +35,21 @@
 
 	.menu-btn {
 		margin-top: 1.3em;
-	  padding-left: 2em;
 	  cursor: pointer;
+		padding-left: 2em;
 	  width: 1em;
 	 }
 
-	 .menu-btn:hover{
-			opacity: 0.6;
-			color: red;
+ .menu-btn:hover{
+		opacity: 0.6;
+		color: red;
 	}
 
 	.main-photo {
 		padding-top: 3.5em;
 	}
+
+/* About us */
 
 	.about-us h1 {
 		margin-top: 1em;
@@ -69,7 +67,7 @@
 		margin: auto;
 	}
 
-	.parent, .parent2, .form {
+	.parent, .parent2 {
 		display: -webkit-box;
 	  display: -webkit-flex;
 	  display: -ms-flexbox;
@@ -77,10 +75,7 @@
 	   -webkit-flex-wrap: wrap;
 	      -ms-flex-wrap: wrap;
 	          flex-wrap: wrap;
-	}
-
-	.parent, .parent2 {
-	  justify-content: center;
+		justify-content: center;
 	}
 
 	.parent {
@@ -95,9 +90,11 @@
 
 	hr {
 		height: 1px;
-		width: 100px;
+		width: 5em;
 		background-color: black;
 	}
+
+	/* Portfolio */
 
 	.portfolio h1 {
 		margin-top: 1em;
@@ -110,8 +107,7 @@
 	}
 
 	.parent2 {
-	  margin-bottom: 1em;
-		padding-bottom: 1.5em;
+		padding-bottom: 8em;
 	}
 
 	.project img {
@@ -127,26 +123,93 @@
 
 	.project {
 		padding: 1em .5em 1em .5em;
+	}
 
+/* Contact page */
+
+	#name, #email, #message-box {
+		background-color: #f0f0f0;
+		border: none;
+		margin-bottom: 2em;
+	}
+
+	.btn-success {
+		background-color: #f0f0f0;
+		border: none;
+	}
+
+	.btn-success:hover {
+		background-color: #f0f0f0;
+		border: 2px solid red;
+	}
+
+	#map {
+		height: 650px;
+		width: 100%;
+		z-index: -1;
 	}
 
 	.contact-header {
-		margin-top: 8em;
+		margin-top: -600px;
+		padding: 4em 0 3em 0;
 		text-align: center;
 	}
+
+	.contact-header h1 {
+		color: white;
+	}
+
+	#contactform {
+		margin: auto;
+		width: 70%;
+	}
+
+	.links {
+		padding-top: 1.5em;
+	}
+
+	.copyright, .social-media {
+		margin: auto;
+		text-align: center;
+		width: 50%;
+	}
+
+	.twitter {
+		margin-right: -8px;
+	}
+
+	.copyright {
+		color: white;
+	}
+
+	/* thank you form */
+
+	.thank-you h1 {
+		margin-top: 3em;
+	}
+
+	.thank-you {
+		text-align: center;
+	}
+
+	.ducks {
+		margin: auto;
+		width: 80%;
+	}
+
 }
 
 @media (min-width: 568px) {
 	p {
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 	.main-photo {
 		padding-top: 0;
-	}	
+	}
 	.parent p {
 		margin: auto;
 		width: 50%;
-	}		
+	}
 }
 
 @media (min-width: 667px) {
@@ -154,17 +217,23 @@
 		width: 80%;
 	}
 	.responsive, .languages, .something {
-		width: 25%;
+		margin-top: 3em;
 		text-align: center;
+		width: 25%;
 	}
 }
 
+@media (min-width: 736px) {
+	.about-us p {
+		font-size: 1.5em;
+	}
+	.parent p {
+		font-size: 1.3em;
+	}
+}
 
 @media (min-width: 822px) {
 	.project img {
-	  background-position: top center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
 	  height: 320px;
 	  width: 350px;
 	}
@@ -186,151 +255,18 @@
 	.project img {
 	  margin: 2em;
 	}
-
-
+	#contactform {
+		margin: auto;
+		width: 25%;
+	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-header {
-	position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 4em;
-  background-color: white;
+@media (min-width: 1290px) {
+	.project img {
+	  height: 300px;
+	  width: 300px;
+	}
+	.project img {
+	  margin: 0;
+	}
 }
-
-.pushy a {
-	color: red;
-	text-align: center;
-}
-
-.pushy ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-#logo {
-	margin: -6em 0 0 80em;
-}
-
-.menu-btn {
-	margin-top: 1.3em;
-  padding-left: 2em;
-  cursor: pointer;
-  width: 2em;
- }
-
- .menu-btn:hover{
-		opacity: 0.6;
-		color: red;
-}
-
-
-.about-us h1 {
-	padding-top: 150px;
-	text-align: center;
-}
-
-.about-us p {
-	margin: auto;
-	text-align: center;
-	width: 60%;
-}
-
-.img-responsive {
-	margin: auto;
-}
-
-.parent {
-	display: -webkit-box;
-	display: -webkit-flex;
-	justify-content: center;
-	padding: 150px 0 100px 0;
-}
-
-.responsive, .languages, .something {
-	width: 25%;
-	text-align: center;
-}
-
-hr {
-	height: 1px;
-	width: 100px;
-	color: black;
-	background-color: black;
-}
-
-.portfolio h1 {
-	padding-top: 150px;
-	text-align: center;
-}
-
-#projects {
-	 background-color: #f0f0f0;
-}
-
-.parent2 {
-	display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-   -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.project img {
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 250px;
-  width: 320px;
-}
-
-.project {
-	padding: 1em .5em 1em .5em;
-}
-}*/
-
-
-
