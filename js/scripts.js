@@ -1,5 +1,7 @@
 $(document).ready(function(){
-//smooth scrolling
+
+//smooth scrolling//
+
   var $root = $('html, body');
     $('.navbar-nav a').click(function() {
   var href = $.attr(this, 'href');
@@ -11,13 +13,45 @@ $(document).ready(function(){
   return false;
 });
 
-// formspree protection from spam
+// formspree protection from spam //
 
 var contactform = document.getElementById('contactform');
   contactform.setAttribute('action', '//formspree.io/' + 'luis' + 'meza01' + '@' + 'gmail' + '.' + 'com');
 });
 
+// cycling through images array //
 
+var imgArray = new Array();
+
+imgArray[0] = new Image();
+imgArray[0].src = 'img/html5.png';
+
+imgArray[1] = new Image();
+imgArray[1].src = 'img/css.png';
+
+imgArray[2] = new Image();
+imgArray[2].src = 'img/js.png';
+
+imgArray[3] = new Image();
+imgArray[3].src = 'img/jquery.jpg';
+
+imgArray[4] = new Image();
+imgArray[4].src = 'img/rails.png';
+
+function displayImg(arr){
+    $('.images').html(arr[0]);
+    var i = 1;
+    setInterval(
+        function(){
+            $('.images').html(arr[i]);
+            i++;
+            if(i >= imgArray.length) i = 0;
+        },1500);
+}
+
+displayImg(imgArray);
+
+// Map API //
 
 var map;
   function initMap() {
