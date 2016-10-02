@@ -1,5 +1,5 @@
-* body {
-font-family: 'Lato', sans-serif;
+body {
+	font-family: 'Lato', sans-serif;
 }
 
 @media (min-width: 320px) {
@@ -8,7 +8,7 @@ font-family: 'Lato', sans-serif;
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 999;
+		z-index: 9999;
 		width: 100%;
 		height: 4em;
 		background-color: white;
@@ -39,30 +39,25 @@ font-family: 'Lato', sans-serif;
 
 	#logo {
 		float: right;
-		margin: -6em -.5em 0 0;
+		margin: -6.7em -.5em 0 0;
 	}
 
 	.menu-btn {
-		margin-top: 1.3em;
+		margin-top: 8px;
 		cursor: pointer;
 		padding-left: 2em;
 		width: 1em;
 	}
 
-	.menu-btn:hover{
-		opacity: 0.6;
-		color: red;
-	}
-
 	.hero-image {
 		background-image: url('../img/austin-small.jpg');
 		/*Photo credit: <a href="https://www.flickr.com/photos/memoriesbymike/15792878729/">Mike Boening Photography</a> via <a href="https://visualhunt.com">VisualHunt.com</a> / <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND</a>*/
-		background-position: top;
+		background-position: top center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 70vh;
+		height: 100vh;
 		width: auto;
-		margin-top: 4em;
+		padding-top: 4.2em;
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: -ms-flexbox;
@@ -72,15 +67,36 @@ font-family: 'Lato', sans-serif;
 		justify-content: center;
 	}
 
-	.main-info h1, .contact-button {
+	.main-info h1, .main-info h2 {
 		color: white;
 		font-family: 'roboto', serif;
-		font-size: 2em;
+		font-size: 1.5em;
 		font-weight: 200;
+		text-align: center;
 	}
 
-	.img-circle, .btn-outline-primary {
-		display: none;
+	.img-circle {
+		width: 60%;
+	}
+
+	.button {
+		display:inline-block;
+		position:relative;
+		padding: 1em 0 1em 0;
+		cursor:pointer;
+		background:white;
+		z-index:0;
+	}
+
+	.button a {
+		color:black;
+		padding: 1.1em 2.5em 1.1em 2.5em;
+		text-decoration: none;
+		font-family: "roboto", serif;
+	}
+
+	.main-info, .circle {
+		margin-bottom: 8em;
 	}
 
 
@@ -117,7 +133,7 @@ font-family: 'Lato', sans-serif;
 		margin: 3em 0 3em 0;
 	}
 
-	.responsive, .languages {
+	.responsive, .languages, .clean-code {
 		width: 60%;
 		text-align: center;
 		margin-bottom: 2em;
@@ -144,7 +160,7 @@ font-family: 'Lato', sans-serif;
 		background-position: top center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 220px;
+		height: auto;
 		width: 250px;
 		box-shadow: 4px 4px 5px #888888;
 		-moz-box-shadow: 4px 4px 5px #888888;
@@ -174,7 +190,7 @@ font-family: 'Lato', sans-serif;
 	}
 
 	#map {
-		height: 650px;
+		height: 610px;
 		width: 100%;
 		z-index: -1;
 	}
@@ -228,8 +244,20 @@ font-family: 'Lato', sans-serif;
 }
 
 @media (min-width: 568px) {
+	.hero-image {
+		background-image: url('../img/austin1.jpg');
+		/*Photo credit: <a href="https://www.flickr.com/photos/byeagle/10819226023/">Jims_photos</a> via <a href="https://visualhunt.com/">Visualhunt</a> / <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA</a>*/
+		background-position: top right;
+		margin-top: 3em;
+		margin-bottom: -3em;
+	}
+
 	p {
 		font-size: 1.2em;
+	}
+
+	.main-info, .circle {
+		margin-bottom: 0;
 	}
 
 	.main-photo {
@@ -247,35 +275,30 @@ font-family: 'Lato', sans-serif;
 		width: 80%;
 	}
 
-	.hero-image {
-		background-image: url('../img/austin.jpg');
-		background-position: top;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 90vh;
-		width: auto;
-		margin-top: 4em;
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
 	.img-circle {
-		display: inline;
+		width: 100%;
 	}
 
-	.responsive, .languages {
+	.responsive, .clean-code {
 		margin-top: 3em;
+	}
+
+	.responsive, .languages, .clean-code {
 		text-align: center;
 		width: 25%;
 	}
 }
 
 @media (min-width: 736px) {
+	.main-info, .circle {
+		margin-bottom: 8em;
+	}
+
+	.main-info h1, .main-info h2 {
+		font-size: 3em;
+		font-weight: 300;
+	}
+
 	.about-us p {
 		font-size: 1.5em;
 	}
@@ -285,52 +308,134 @@ font-family: 'Lato', sans-serif;
 }
 
 @media (min-width: 822px) {
-	.hvr-sweep-to-right {
-	  display: inline-block;
-	  vertical-align: middle;
-	  -webkit-transform: translateZ(0);
-	  transform: translateZ(0);
-	  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-	  -webkit-backface-visibility: hidden;
-	  backface-visibility: hidden;
-	  -moz-osx-font-smoothing: grayscale;
-	  position: relative;
-	  -webkit-transition-property: color;
-	  transition-property: color;
-	  -webkit-transition-duration: 0.3s;
-	  transition-duration: 0.3s;
+	.hero-image {
+		background-position: top center;
+		margin-top: 3em;
+		margin-bottom: -3em;
 	}
-	.hvr-sweep-to-right:before {
-	  content: "";
-	  position: absolute;
-	  z-index: -1;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	  bottom: 0;
-	  background: #2098d1;
-	  -webkit-transform: scaleX(0);
-	  transform: scaleX(0);
-	  -webkit-transform-origin: 0 50%;
-	  transform-origin: 0 50%;
-	  -webkit-transition-property: transform;
-	  transition-property: transform;
-	  -webkit-transition-duration: 0.3s;
-	  transition-duration: 0.3s;
-	  -webkit-transition-timing-function: ease-out;
-	  transition-timing-function: ease-out;
+
+	.button {
+		padding: 1em 0 1em 0;
 	}
-	.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
-	  color: white;
+
+	.button a {
+		padding: 1.1em 2.5em 1.1em 2.5em;
 	}
-	.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
-	  -webkit-transform: scaleX(1);
-	  transform: scaleX(1);
+
+	/*BUTTON HOVER EFFECT */
+
+	.button:before {
+		background: red;
+		bottom: 0;
+		content: "";
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		-webkit-transform: scaleX(0);
+		-moz-transform: scaleX(0);
+		-ms-transform: scaleX(0);
+		-o-transform: scaleX(0);
+		transform: scaleX(0);
+		-webkit-transform-origin: 0 50%;
+		-moz-transform-origin: 0 50%;
+		-ms-transform-origin: 0 50%;
+		-o-transform-origin: 0 50%;
+		transform-origin: 0 50%;
+		-webkit-transition: transform .4s ease-out;
+		-moz-transition: transform .4s ease-out;
+		-ms-transition: transform .4s ease-out;
+		-o-transition: transform .4s ease-out;
+		transition: transform .4s ease-out;
+		z-index:-1;
+	}
+
+	.button:hover:before{
+		transform: scaleX(1);
+	}
+
+
+	/*Portfolio Hover */
+
+	.overlay a {
+		text-decoration: none;
+	}
+
+	.hovereffect {
+		position: relative;
+		text-align: center;
+	}
+
+	.overlay {
+		position: absolute;
+	}
+
+	.hovereffect .overlay {
+		border-bottom: 1px solid #FFF;
+		border-top: 1px solid #FFF;
+		height: 80%;
+		left: 10%;
+		overflow: hidden;
+		top: 10%;
+		transform: scale(0,1);
+		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		transition: opacity 0.35s, transform 0.35s;
+		-webkit-transform: scale(0,1);
+		-ms-transform: scale(0,1);
+		width: 80%;
+	}
+
+	.hovereffect:hover .overlay {
+		filter: alpha(opacity=100);
+		opacity: 1;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+
+	.hovereffect:hover img {
+		filter: brightness(0.6);
+		-webkit-filter: brightness(0.6);
+	}
+
+	.hovereffect h2 {
+		background-color: transparent;
+		color: #FFF;
+		filter: alpha(opacity=0);
+		font-size: 1.5em;
+		padding: 1em 0;
+		position: relative;
+		opacity: 10;
+		text-transform: uppercase;
+		text-align: center;
+		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		transition: opacity 0.35s, transform 0.35s;
+		-webkit-transform: translate3d(0,-100%,0);
+		transform: translate3d(0,-100%,0);
+	}
+
+	.hovereffect p {
+		color: white;
+		filter: alpha(opacity=0);
+		padding: 1em 0;
+		opacity: 0;
+		transform: translate3d(0,100%,0);
+		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		-moz-transition: opacity 0.35s, -webkit-transform 0.35s;
+		transition: opacity 0.35s, transform 0.35s;
+		-webkit-transform: translate3d(0,100%,0);
+		-moz-transform: translate3d(0,100%,0);
+	}
+
+	.hovereffect:hover p, .hovereffect:hover h2 {
+		filter: alpha(opacity=100);
+		opacity: 1;
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
 	}
 
 	.project img {
-		height: 320px;
-		width: 350px;
+		width: 375px;
 	}
 
 	.about-us {
@@ -348,7 +453,7 @@ font-family: 'Lato', sans-serif;
 
 @media (min-width: 1022px) {
 	.project img {
-		margin: 2em;
+		width: 400px;
 	}
 	#contactform {
 		margin: auto;
@@ -356,12 +461,16 @@ font-family: 'Lato', sans-serif;
 	}
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 1272px) {
 	.project img {
-		height: 300px;
-		width: 300px;
+		margin: 0 1em 0 1em;
 	}
+}
+
+
+@media (min-width: 1356px) {
 	.project img {
 		margin: 0;
+		width: 350px;
 	}
 }
