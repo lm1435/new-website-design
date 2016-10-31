@@ -40,7 +40,7 @@ $(document).ready(function() {
   contactform.setAttribute('action', 'https://formspree.io/' + 'luis' +
     'meza01' + '@' + 'gmail' + '.' + 'com');
 	
-	var forms = document.getElementById('form');
+	var forms = document.getElementsByTagName('form');
 	for (var i = 0; i < forms.length; i++) {
     forms[i].noValidate = true;
 
