@@ -48,6 +48,7 @@ $(document).ready(function() {
         //Prevent submission if checkValidity on the form returns false.
         if (!event.target.checkValidity()) {
             event.preventDefault();
+						alert('Please, fill out form. Thank you!');
 //					
 				}
     }, false);
