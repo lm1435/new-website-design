@@ -252,9 +252,8 @@
 
 @media (min-width: 568px) {
   .hero-image {
-    background-image: url(../img/austin.jpg);
-  /*Photo credit: <a href="https://www.flickr.com/photos/byeagle/10819226023/">Jims_photos</a> via <a href="https://visualhunt.com/">Visualhunt</a> / <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA</a>*/
-    background-position: top right;
+    background-image: url(../img/austin1.jpg);
+    background-position: top;
     margin-top: 0;
     margin-bottom: -3em;
   }
