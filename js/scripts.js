@@ -40,16 +40,16 @@ $(document).ready(function() {
   contactform.setAttribute('action', 'https://formspree.io/' + 'luis' +
     'meza01' + '@' + 'gmail' + '.' + 'com');
 	
-	var forms = document.getElementsByTagName('form');
-for (var i = 0; i < forms.length; i++) {
+	var forms = document.getElementById('form');
+	for (var i = 0; i < forms.length; i++) {
     forms[i].noValidate = true;
 
     forms[i].addEventListener('submit', function(event) {
         //Prevent submission if checkValidity on the form returns false.
         if (!event.target.checkValidity()) {
             event.preventDefault();
-            alert("Please fill out the form.");
-        }
+//					
+				}
     }, false);
 };
 	
