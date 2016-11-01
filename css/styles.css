@@ -252,7 +252,7 @@
 
 @media (min-width: 568px) {
   .hero-image {
-    background-image: url(../img/Austin.jpg);
+    background-image: url(../img/Austin-pic.jpg);
     background-position: top left;
     margin-top: 0;
     margin-bottom: -3em;
@@ -297,13 +297,13 @@
     margin-top: 3em;
   }
 
-  .responsive,.languages,.clean-code {
+  .responsive, .languages, .clean-code {
     width: 25%;
   }
 }
 
 @media (min-width: 736px) {
-  .main-info,.circle {
+  .main-info, .circle {
     margin-bottom: 8em;
   }
 
