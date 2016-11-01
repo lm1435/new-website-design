@@ -46,8 +46,6 @@
     background-image: url(../img/small.jpg);
   /*Photo credit: <a href="https://www.flickr.com/photos/memoriesbymike/15792878729/">Mike Boening Photography</a> via <a href="https://visualhunt.com">VisualHunt.com</a> / <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND</a>*/
     background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
     width: auto;
     padding-top: 4.2em;
@@ -254,6 +252,8 @@
   .hero-image {
     background-image: url(../img/Austin-pic.jpg);
     background-position: top left;
+		background-repeat: no-repeat;
+		background-size: cover;
     margin-top: 0;
     margin-bottom: -3em;
 /*
@@ -455,7 +455,7 @@
     height: 325px;
     width: 375px;
   }
-	
+
 	.img-circle {
     width: 90%;
   }

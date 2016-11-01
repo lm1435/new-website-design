@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function () {
+	$(".main-info").hide().slideDown(1500);
   // cycling through images array //
   var imgArray = new Array();
   imgArray[0] = new Image();
@@ -22,7 +23,7 @@ $(document).ready(function() {
       i++;
       if (i >= imgArray.length) i = 0;
     }, 1500);
-  }
+  };
   displayImg(imgArray);
   //smooth scrolling//
   var $root = $('html, body');
@@ -39,7 +40,7 @@ $(document).ready(function() {
   var contactform = document.getElementById('contactform');
   contactform.setAttribute('action', 'https://formspree.io/' + 'luis' +
     'meza01' + '@' + 'gmail' + '.' + 'com');
-	
+
 	var forms = document.getElementsByTagName('form');
 	for (var i = 0; i < forms.length; i++) {
     forms[i].noValidate = true;
@@ -48,12 +49,12 @@ $(document).ready(function() {
         //Prevent submission if checkValidity on the form returns false.
         if (!event.target.checkValidity()) {
             event.preventDefault();
-						alert('Please, fill out form. Thank you!');
-//					
+						alert('Please fill out the form. Thank you!');
+//
 				}
     }, false);
-};
-	
+	};
+
 });
 // Map API //
 var map;
