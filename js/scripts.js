@@ -17,7 +17,7 @@ $(document).ready(function () {
 
   function displayImg(arr) {
     $('.images').html(arr[0]);
-    var i = 1;
+    var i = 0;
     setInterval(function() {
       $('.images').html(arr[i]);
       i++;
