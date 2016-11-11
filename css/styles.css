@@ -48,7 +48,6 @@
     background-position: top center;
     height: 100vh;
     width: auto;
-    padding-top: 4.2em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -204,6 +203,11 @@
   .contact-header {
     margin-top: -600px;
     padding: 4em 0 3em;
+  }
+
+  .btn-sucess:focus {
+    background-color: none;
+    border-color: none;
   }
 
   .contact-header h1 {
