@@ -182,12 +182,14 @@
   #name,#email,#message-box {
     background-color: #f0f0f0;
     border: none;
+    border-radius: 0;
     margin-bottom: 2em;
   }
 
   .btn-success {
     background-color: #f0f0f0;
     border: none;
+    border-radius: 0;
   }
 
   .btn-success:hover {
