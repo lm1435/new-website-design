@@ -22,6 +22,10 @@
     color: red;
   }
 
+  #about a {
+    color: black;
+  }
+
   .pushy ul {
     list-style-type: none;
     padding: 0;
