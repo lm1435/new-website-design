@@ -1,0 +1,27 @@
+{
+  "name": "luismeza",
+  "version": "1.0.0",
+  "description": "New website portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "eslint": "^3.15.0",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lm1435/new-website-design.git"
+  },
+  "author": "Luis Meza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lm1435/new-website-design/issues"
+  },
+  "homepage": "https://github.com/lm1435/new-website-design#readme"
+}

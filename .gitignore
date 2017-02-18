@@ -1,0 +1,16 @@
+#osx folder attribute
+.DS_Store
+
+#npm debugging logs
+npm-debug.log
+
+#project dependencies
+node_modules
+
+#temporary files
+*.tmp
+*~
+
+#es5 code that we dont worry about.
+dist
+public/dist

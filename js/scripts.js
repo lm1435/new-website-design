@@ -98,13 +98,11 @@ $(document).ready(function () {
   imgArray[5] = new Image();
   imgArray[5].src = 'img/rails.png';
   imgArray[6] = new Image();
-  imgArray[6].src = 'img/babel.png';
+  imgArray[6].src = 'img/gulp.png';
   imgArray[7] = new Image();
   imgArray[7].src = 'img/sass.png';
   imgArray[8] = new Image();
   imgArray[8].src = 'img/git.png';
-  imgArray[9] = new Image();
-  imgArray[9].src = 'img/gulp.png';
 
   function displayImg(arr) {
     $('.images').html(arr[0]);
