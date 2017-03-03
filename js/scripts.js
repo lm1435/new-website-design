@@ -80,9 +80,27 @@ function initMap(){
   });
 }
 
+// $(".jamaica").on('click', function(){
+//   document.getElementById("jamaica").style.display = "block";
+//   document.getElementById("philadelphia").style.display = "none";
+//   document.getElementById("portland").style.display = "none";
+// });
+// $(".philadelphia").on('click', function(){
+//   document.getElementById("philadelphia").style.display = "block";
+//   document.getElementById("portland").style.display = "none";
+//   document.getElementById("jamaica").style.display = "none";
+// });
+// $(".portland").on('click', function(){
+//   document.getElementById("portland").style.display = "block";
+//   document.getElementById("philadelphia").style.display = "none";
+//   document.getElementById("jamaica").style.display = "none";
+// });
+function hide (id) {
+  $("#" + id).toggle();
+}
 
 $(document).ready(function () {
-	$(".main-info").hide().slideDown(1500);
+  $(".main-info").hide().slideDown(1500);
   // cycling through images array //
   var imgArray = new Array();
   imgArray[0] = new Image();
@@ -111,9 +129,10 @@ $(document).ready(function () {
       $('.images').html(arr[i]);
       i++;
       if (i >= imgArray.length) i = 0;
-    }, 1500);
+    }, 1200);
   }
   displayImg(imgArray);
+
   //smooth scrolling//
   var $root = $('html, body');
   $('.navbar-nav a').click(function() {
@@ -130,18 +149,16 @@ $(document).ready(function () {
   contactform.setAttribute('action', 'https://formspree.io/' + 'luis' +
     'meza01' + '@' + 'gmail' + '.' + 'com');
 
-	var forms = document.getElementsByTagName('form');
-	for (var i = 0; i < forms.length; i++) {
+  var forms = document.getElementsByTagName('form');
+  for (var i = 0; i < forms.length; i++) {
     forms[i].noValidate = true;
 
     forms[i].addEventListener('submit', function(event) {
         //Prevent submission if checkValidity on the form returns false.
         if (!event.target.checkValidity()) {
             event.preventDefault();
-						alert('Please fill out the form. Thank you!');
-//
-				}
+              alert('Please fill out the form. Thank you!');
+        }
     }, false);
-	}
-
+  }
 });
