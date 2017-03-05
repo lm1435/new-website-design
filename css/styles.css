@@ -9,8 +9,11 @@
         background-color: #fff
     }
     .pushy a {
-        color: #ff282a;
+      color: #fff;
         text-align: center
+    }
+    .pushy a:hover {
+      color: #ff282a;
     }
     .main-photo {
         background: fixed
@@ -217,7 +220,7 @@
       text-decoration: none;
       color: black;
     }
-    #philadelphia, #jamaica, #portland {
+    .hide {
       display: none;
     }
 }

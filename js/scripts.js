@@ -79,38 +79,32 @@ function initMap(){
     }]
   });
 }
-var jamaicaImg = ['img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j4.png', 'img/j6.png', 'img/j5.png', 'img/j8.png', 'img/j7.png'];
-$(".jamaica").one('click', function(){
-  for (var i = 0; i<jamaicaImg.length; i++) {
-    var img = $('<img >', {
-      class: "img-responsive",
-      src: jamaicaImg[i],
-      width: '40%'
-    });
-    img.appendTo($("#jamaica"));
-  }
-});
-
-$(".philadelphia").on('click', function(){
-
-});
-
-$(".portland").on('click', function(){
-
-});
 
 function hide (id) {
-  $("#" + id).toggle().css({
-      display: "-webkit-box",
-      display: "-webkit-flex",
-      display: "-ms-flexbox",
-      display: 'flex',
-      'flex-direction': 'row',
-      'align-items': 'center',
-      'justify-content': 'space-around',
-      'flex-wrap': 'wrap'
-  });
+  $("#" + id).toggle();
 }
+
+var jamaicaImg = ['img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j4.png', 'img/j5.png', 'img/j6.png', 'img/j8.png', 'img/j7.png'];
+
+
+$(".jamaica").one('click', function(e){
+  e.preventDefault();
+  for (var i = 0; i<jamaicaImg.length; i++) {
+    var img = $('<img >', {
+      class: "img-responsive col-xs-6 col-md-3",
+      src: jamaicaImg[i]
+    });
+    img.appendTo($("#jamaica"));
+   }
+   console.log($("#jamaica").outerHeight());
+ });
+
+// $(".philadelphia").on('click', function(){
+//
+// });
+// $(".portland").on('click', function(){
+//
+// });
 
 $(document).ready(function () {
   $(".main-info").hide().slideDown(1500);
