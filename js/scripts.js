@@ -84,21 +84,35 @@ function hide (id) {
   $("#" + id).toggle();
 }
 
-var jamaicaImg = ['img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j4.png', 'img/j5.png', 'img/j6.png', 'img/j8.png', 'img/j7.png'];
-
+var jamaicaImg = ['img/j5.jpg', 'img/j4.png', 'img/j7.png', 'img/j6.png', 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png'];
 
 $(".jamaica").one('click', function(e){
   e.preventDefault();
   for (var i = 0; i<jamaicaImg.length; i++) {
     var img = $('<img >', {
-      class: "img-responsive col-xs-6 col-md-3",
+      class: "img-responsive",
       src: jamaicaImg[i]
     });
     img.appendTo($("#jamaica"));
    }
-   console.log($("#jamaica").outerHeight());
+   $("#jamaica").css({
+     width: "80vw",
+     margin: "auto",
+     display: "-webkit-box",
+     "display": "-webkit-flex",
+     "display": "-ms-flexbox",
+     "display": "flex",
+     "-webkit-flex-wrap": "wrap",
+     "-ms-flex-wrap": "wrap",
+     "flex-wrap": "wrap",
+     "justify-content": "space-around",
+     "flex-direction": "row"
+   });
+   $("#jamaica").children("img").css({
+     width: "20%",
+      margin: "auto 5px"
+   });
  });
-
 // $(".philadelphia").on('click', function(){
 //
 // });
@@ -157,15 +171,15 @@ $(document).ready(function () {
     'meza01' + '@' + 'gmail' + '.' + 'com');
 
   var forms = document.getElementsByTagName('form');
-  for (var i = 0; i < forms.length; i++) {
-    forms[i].noValidate = true;
 
-    forms[i].addEventListener('submit', function(event) {
-        //Prevent submission if checkValidity on the form returns false.
-        if (!event.target.checkValidity()) {
-            event.preventDefault();
-              alert('Please fill out the form. Thank you!');
-        }
-    }, false);
-  }
-});
+  var i = 0;
+  forms[i].noValidate = true;
+  forms[i].addEventListener('submit', function(e) {
+    //Prevent submission if checkValidity on the form returns false.
+    if (!e.target.checkValidity()) {
+        e.preventDefault();
+        alert('Please fill out the form. Thank you!');
+    }
+  i++;
+  }, false);
+  });

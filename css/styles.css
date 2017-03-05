@@ -220,9 +220,6 @@
       text-decoration: none;
       color: black;
     }
-    .hide {
-      display: none;
-    }
 }
 
 @media (min-width:568px) {
