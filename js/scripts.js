@@ -79,24 +79,37 @@ function initMap(){
     }]
   });
 }
+var jamaicaImg = ['img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j4.png', 'img/j6.png', 'img/j5.png', 'img/j8.png', 'img/j7.png'];
+$(".jamaica").one('click', function(){
+  for (var i = 0; i<jamaicaImg.length; i++) {
+    var img = $('<img >', {
+      class: "img-responsive",
+      src: jamaicaImg[i],
+      width: '40%'
+    });
+    img.appendTo($("#jamaica"));
+  }
+});
 
-// $(".jamaica").on('click', function(){
-//   document.getElementById("jamaica").style.display = "block";
-//   document.getElementById("philadelphia").style.display = "none";
-//   document.getElementById("portland").style.display = "none";
-// });
-// $(".philadelphia").on('click', function(){
-//   document.getElementById("philadelphia").style.display = "block";
-//   document.getElementById("portland").style.display = "none";
-//   document.getElementById("jamaica").style.display = "none";
-// });
-// $(".portland").on('click', function(){
-//   document.getElementById("portland").style.display = "block";
-//   document.getElementById("philadelphia").style.display = "none";
-//   document.getElementById("jamaica").style.display = "none";
-// });
+$(".philadelphia").on('click', function(){
+
+});
+
+$(".portland").on('click', function(){
+
+});
+
 function hide (id) {
-  $("#" + id).toggle();
+  $("#" + id).toggle().css({
+      display: "-webkit-box",
+      display: "-webkit-flex",
+      display: "-ms-flexbox",
+      display: 'flex',
+      'flex-direction': 'row',
+      'align-items': 'center',
+      'justify-content': 'space-around',
+      'flex-wrap': 'wrap'
+  });
 }
 
 $(document).ready(function () {
@@ -123,7 +136,6 @@ $(document).ready(function () {
   imgArray[8].src = 'img/git.png';
 
   function displayImg(arr) {
-    $('.images').html(arr[0]);
     var i = 0;
     setInterval(function() {
       $('.images').html(arr[i]);
@@ -132,6 +144,7 @@ $(document).ready(function () {
     }, 1200);
   }
   displayImg(imgArray);
+
 
   //smooth scrolling//
   var $root = $('html, body');
