@@ -85,6 +85,8 @@ function hide (id) {
 }
 
 var jamaicaImg = ['img/j5.jpg', 'img/j4.png', 'img/j7.png', 'img/j6.png', 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png'];
+var portlandImg = ['img/p1.png', 'img/p2.png', 'img/p3.png', 'img/p4.png', 'img/p5.png', 'img/p6.png', 'img/p7.png', 'img/p8.png'];
+var philadelphiaImg = ['img/h1.png', 'img/h2.png', 'img/h3.png', 'img/h4.png', 'img/jh5.png', 'img/h6.png', 'img/h7.png', 'img/h8.png'];
 
 $(".jamaica").one('click', function(e){
   e.preventDefault();
@@ -95,30 +97,45 @@ $(".jamaica").one('click', function(e){
     });
     img.appendTo($("#jamaica"));
    }
-   $("#jamaica").css({
-     width: "80vw",
-     margin: "auto",
-     display: "-webkit-box",
-     "display": "-webkit-flex",
-     "display": "-ms-flexbox",
-     "display": "flex",
-     "-webkit-flex-wrap": "wrap",
-     "-ms-flex-wrap": "wrap",
-     "flex-wrap": "wrap",
-     "justify-content": "space-around",
-     "flex-direction": "row"
-   });
-   $("#jamaica").children("img").css({
-     width: "20%",
-      margin: "auto 5px"
-   });
  });
-// $(".philadelphia").on('click', function(){
-//
-// });
-// $(".portland").on('click', function(){
-//
-// });
+$(".philadelphia").one('click', function(e){
+  e.preventDefault();
+  for (var i = 0; i<philadelphiaImg.length; i++) {
+    var img = $('<img >', {
+      class: "img-responsive",
+      src: philadelphiaImg[i]
+    });
+    img.appendTo($("#philadelphia"));
+   }
+});
+$(".portland").one('click', function(e){
+  e.preventDefault();
+  for (var i = 0; i<portlandImg.length; i++) {
+    var img = $('<img >', {
+      class: "img-responsive",
+      src: portlandImg[i]
+    });
+    img.appendTo($("#portland"));
+   }
+});
+$("#jamaica,#portland,#philadelphia").css({
+  width: "80vw",
+  margin: "auto",
+  display: "-webkit-box",
+  "display": "-webkit-flex",
+  "display": "-ms-flexbox",
+  "display": "flex",
+  "-webkit-flex-wrap": "wrap",
+  "-ms-flex-wrap": "wrap",
+  "flex-wrap": "wrap",
+  "justify-content": "space-around",
+  "flex-direction": "row"
+});
+
+$("#jamaica,#portland,#philadelphia").children("img").css({
+  "width": "20%",
+  "margin": "auto 5px"
+});
 
 $(document).ready(function () {
   $(".main-info").hide().slideDown(1500);
