@@ -95,7 +95,7 @@ function css (name) {
   });
 }
 
-function cssSmall () {
+function cssSmall (name) {
   $('#' + name).children("img").css({
       "width": "90%",
       "margin": "auto"
