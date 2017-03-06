@@ -84,22 +84,33 @@ function hide (id) {
   $("#" + id).toggle();
 }
 
-var jamaicaImg = ['img/j5.png', 'img/j4.png', 'img/j7.png', 'img/j6.png', 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png'];
-var portlandImg = ['img/p1.png', 'img/p2.png', 'img/p3.png', 'img/p4.png', 'img/p5.png', 'img/p6.png', 'img/p7.png', 'img/p8.png'];
+var jamaicaImg = ['img/j5.jpg', 'img/j4.png', 'img/j7.png', 'img/j6.png', 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png'];
+var portlandImg = ['img/p1.png', 'img/p2.jpeg', 'img/p3.jpeg', 'img/p4.png', 'img/p5.png', 'img/p6.png', 'img/p7.png', 'img/p8.png'];
 var philadelphiaImg = ['img/h1.png', 'img/h2.png', 'img/h6.png', 'img/h4.png', 'img/h5.png','img/h3.png', 'img/h7.png', 'img/h8.png'];
 
 function css (name) {
   $('#' + name).children("img").css({
-      "width": "20%",
-      "margin": "auto 5px"
+      "width": "15vw",
+      "margin": "auto 5vw"
   });
 }
 
 function cssSmall (name) {
-  $('#' + name).children("img").css({
-      "width": "90%",
-      "margin": "auto"
-  });
+  if ($(window).width() < 420){
+    $('#' + name).children("img").css({
+        "width": "70vw",
+        "margin": "auto"
+    });
+  }
+}
+
+function cssMedium (name) {
+  if ($(window).width() < 780){
+    $('#' + name).children("img").css({
+        "width": "35vw",
+        "margin": "auto"
+    });
+  }
 }
 
 $(".jamaica").one('click', function(e){
@@ -112,9 +123,8 @@ $(".jamaica").one('click', function(e){
     img.appendTo($("#jamaica"));
    }
    css("jamaica");
-   if ($(window).width() < 768){
-     cssSmall("jamaica");
-   }
+   cssSmall("jamaica");
+   cssMedium("jamaica");
  });
 
 $(".philadelphia").one('click', function(e){
@@ -127,9 +137,7 @@ $(".philadelphia").one('click', function(e){
     img.appendTo($("#philadelphia"));
    }
    css("philadelphia");
-   if ($(window).width() < 768){
-     cssSmall("philadelphia");
-   }
+   cssSmall("philadelphia");
 });
 
 $(".portland").one('click', function(e){
@@ -142,9 +150,7 @@ $(".portland").one('click', function(e){
     img.appendTo($("#portland"));
    }
    css("portland");
-   if ($(window).width() < 768){
-     cssSmall("portland");
-   }
+   cssSmall("portland");
 });
 
 $("#jamaica,#portland,#philadelphia").css({
@@ -157,12 +163,14 @@ $("#jamaica,#portland,#philadelphia").css({
   "-ms-flex-wrap": "wrap",
   "flex-wrap": "wrap",
   "justify-content": "space-around",
-  "flex-direction": "row",
-  "background-color": "#d9e1e8"
+  "flex-direction": "row"
 });
+
+document.getElementById("totalTrips").style.backgroundColor= "#d9e1e8";
 
 $(document).ready(function () {
   $(".main-info").hide().slideDown(1500);
+
   // cycling through images array //
   var imgArray = [
     'html5.png',
@@ -174,6 +182,7 @@ $(document).ready(function () {
     'gulp.png',
     'sass.png',
     'git.png'];
+
   function displayImg() {
     var i = 0;
     setInterval(function() {
@@ -196,8 +205,10 @@ $(document).ready(function () {
     });
     return false;
   });
+
   // formspree protection from spam //
   var contactform = document.getElementById('contactform');
+
   contactform.setAttribute('action', 'https://formspree.io/' + 'luis' +
     'meza01' + '@' + 'gmail' + '.' + 'com');
 
