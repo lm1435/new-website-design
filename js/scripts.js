@@ -80,106 +80,108 @@ function initMap(){
   });
 }
 
-function hide (id) {
-  $("#" + id).toggle();
-}
 
-var jamaicaImg = ['img/j5.jpg', 'img/j4.png', 'img/j7.png', 'img/j6.png', 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png'];
-var portlandImg = ['img/p1.png', 'img/p2.jpeg', 'img/p3.jpeg', 'img/p4.png', 'img/p5.png', 'img/p6.png', 'img/p7.png', 'img/p8.png'];
-var philadelphiaImg = ['img/h1.png', 'img/h2.png', 'img/h6.png', 'img/h4.png', 'img/h5.png','img/h3.png', 'img/h7.png', 'img/h8.png'];
-
-function css (name) {
-  $('#' + name).children("img").css({
-      "width": "15vw",
-      "margin": "auto 5vw"
-  });
-}
-
-function cssSmall (name) {
-  if ($(window).width() < 420){
-    $('#' + name).children("img").css({
-        "width": "70vw",
-        "margin": "auto"
-    });
-  }
-}
-
-function cssMedium (name) {
-  if ($(window).width() < 780){
-    $('#' + name).children("img").css({
-        "width": "35vw",
-        "margin": "auto"
-    });
-  }
-}
-
-var display="";
-var link = "";
-var idName= "";
-
-function imagesChange(link, imageArr, display, idName){
-  $(link).one('click', function(e){
-    e.preventDefault();
-    for (var i = 0; i<imageArr.length; i++) {
-      var img = $('<img >', {
-        class: "img-responsive",
-        src: imageArr[i]
-      });
-      img.appendTo($(display));
-     }
-     css(idName);
-     cssSmall(idName);
-     cssMedium(idName);
-  });
-}
-
-imagesChange(".jamaica", jamaicaImg, "#jamaica", "jamaica");
-imagesChange(".portland", portlandImg, "#portland", "portland");
-imagesChange(".philadelphia", philadelphiaImg, "#philadelphia", "philadelphia");
-
-// $(".philadelphia").one('click', function(e){
-//   e.preventDefault();
-//   for (var i = 0; i<philadelphiaImg.length; i++) {
-//     var img = $('<img >', {
-//       class: "img-responsive",
-//       src: philadelphiaImg[i]
-//     });
-//     img.appendTo($("#philadelphia"));
-//    }
-//    css("philadelphia");
-//    cssSmall("philadelphia");
-// });
-//
-// $(".portland").one('click', function(e){
-//   e.preventDefault();
-//   for (var i = 0; i<portlandImg.length; i++) {
-//     var img = $('<img >', {
-//       class: "img-responsive",
-//       src: portlandImg[i]
-//     });
-//     img.appendTo($("#portland"));
-//    }
-//    css("portland");
-//    cssSmall("portland");
-// });
-
-$("#jamaica,#portland,#philadelphia").css({
-  margin: "auto",
-  display: "-webkit-box",
-  "display": "-webkit-flex",
-  "display": "-ms-flexbox",
-  "display": "flex",
-  "-webkit-flex-wrap": "wrap",
-  "-ms-flex-wrap": "wrap",
-  "flex-wrap": "wrap",
-  "justify-content": "space-around",
-  "flex-direction": "row"
-});
-
-document.getElementById("totalTrips").style.backgroundColor= "#d9e1e8";
 
 $(document).ready(function () {
   $(".main-info").hide().slideDown(1500);
+
+  document.getElementById("totalTrips").style.backgroundColor= "#d9e1e8";
+
+  function hide (id) {
+    $("#" + id).toggle();
+  }
+
+  var jamaicaImg = ['img/j5.jpg', 'img/j4.png', 'img/j7.png', 'img/j6.png', 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png'];
+  var portlandImg = ['img/p1.png', 'img/p2.jpeg', 'img/p3.jpeg', 'img/p4.png', 'img/p5.png', 'img/p6.png', 'img/p7.png', 'img/p8.png'];
+  var philadelphiaImg = ['img/h1.png', 'img/h2.png', 'img/h6.png', 'img/h4.png', 'img/h5.png','img/h3.png', 'img/h7.png', 'img/h8.png'];
+
+  function css (name) {
+    $('#' + name).children("img").css({
+        "width": "15vw",
+        "margin": "auto 5vw"
+    });
+  }
+
+  function cssSmall (name) {
+    if ($(window).width() < 420){
+      $('#' + name).children("img").css({
+          "width": "70vw",
+          "margin": "auto"
+      });
+    }
+  }
+
+  function cssMedium (name) {
+    if ($(window).width() < 780){
+      $('#' + name).children("img").css({
+          "width": "35vw",
+          "margin": "auto"
+      });
+    }
+  }
+
+  var display="";
+  var link = "";
+  var idName= "";
+
+  function imagesChange(link, imageArr, display, idName){
+    $(link).one('click', function(e){
+      e.preventDefault();
+      for (var i = 0; i<imageArr.length; i++) {
+        var img = $('<img >', {
+          class: "img-responsive",
+          src: imageArr[i]
+        });
+        img.appendTo($(display));
+       }
+       css(idName);
+       cssSmall(idName);
+       cssMedium(idName);
+    });
+  }
+
+  imagesChange(".jamaica", jamaicaImg, "#jamaica", "jamaica");
+  imagesChange(".portland", portlandImg, "#portland", "portland");
+  imagesChange(".philadelphia", philadelphiaImg, "#philadelphia", "philadelphia");
+
+  // $(".philadelphia").one('click', function(e){
+  //   e.preventDefault();
+  //   for (var i = 0; i<philadelphiaImg.length; i++) {
+  //     var img = $('<img >', {
+  //       class: "img-responsive",
+  //       src: philadelphiaImg[i]
+  //     });
+  //     img.appendTo($("#philadelphia"));
+  //    }
+  //    css("philadelphia");
+  //    cssSmall("philadelphia");
+  // });
+  //
+  // $(".portland").one('click', function(e){
+  //   e.preventDefault();
+  //   for (var i = 0; i<portlandImg.length; i++) {
+  //     var img = $('<img >', {
+  //       class: "img-responsive",
+  //       src: portlandImg[i]
+  //     });
+  //     img.appendTo($("#portland"));
+  //    }
+  //    css("portland");
+  //    cssSmall("portland");
+  // });
+
+  $("#jamaica,#portland,#philadelphia").css({
+    margin: "auto",
+    display: "-webkit-box",
+    "display": "-webkit-flex",
+    "display": "-ms-flexbox",
+    "display": "flex",
+    "-webkit-flex-wrap": "wrap",
+    "-ms-flex-wrap": "wrap",
+    "flex-wrap": "wrap",
+    "justify-content": "space-around",
+    "flex-direction": "row"
+  });
 
   // cycling through images array //
   var imgArray = [
