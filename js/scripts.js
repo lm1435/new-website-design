@@ -80,16 +80,14 @@ function initMap(){
   });
 }
 
-
+function hide (id) {
+  $("#" + id).toggle();
+}
 
 $(document).ready(function () {
   $(".main-info").hide().slideDown(1500);
 
   document.getElementById("totalTrips").style.backgroundColor= "#d9e1e8";
-
-  function hide (id) {
-    $("#" + id).toggle();
-  }
 
   var jamaicaImg = ['img/j5.jpg', 'img/j4.png', 'img/j7.png', 'img/j6.png', 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png'];
   var portlandImg = ['img/p1.png', 'img/p2.jpeg', 'img/p3.jpeg', 'img/p4.png', 'img/p5.png', 'img/p6.png', 'img/p7.png', 'img/p8.png'];
@@ -97,25 +95,28 @@ $(document).ready(function () {
 
   function css (name) {
     $('#' + name).children("img").css({
-        "width": "15vw",
-        "margin": "auto 5vw"
+        "width": "21vw",
+        "margin": "auto",
+        "padding": "5vh 2vw"
     });
-  }
-
-  function cssSmall (name) {
-    if ($(window).width() < 420){
-      $('#' + name).children("img").css({
-          "width": "70vw",
-          "margin": "auto"
-      });
-    }
   }
 
   function cssMedium (name) {
     if ($(window).width() < 780){
       $('#' + name).children("img").css({
           "width": "35vw",
-          "margin": "auto"
+          "margin": "auto",
+          "padding": "0"
+      });
+    }
+  }
+
+  function cssSmall (name) {
+    if ($(window).width() < 420){
+      $('#' + name).children("img").css({
+          "width": "60vw",
+          "margin": "auto",
+          "padding": "0"
       });
     }
   }
@@ -129,14 +130,13 @@ $(document).ready(function () {
       e.preventDefault();
       for (var i = 0; i<imageArr.length; i++) {
         var img = $('<img >', {
-          class: "img-responsive",
           src: imageArr[i]
         });
         img.appendTo($(display));
        }
        css(idName);
-       cssSmall(idName);
        cssMedium(idName);
+       cssSmall(idName);
     });
   }
 
@@ -171,7 +171,6 @@ $(document).ready(function () {
   // });
 
   $("#jamaica,#portland,#philadelphia").css({
-    margin: "auto",
     display: "-webkit-box",
     "display": "-webkit-flex",
     "display": "-ms-flexbox",
@@ -179,8 +178,7 @@ $(document).ready(function () {
     "-webkit-flex-wrap": "wrap",
     "-ms-flex-wrap": "wrap",
     "flex-wrap": "wrap",
-    "justify-content": "space-around",
-    "flex-direction": "row"
+    "justify-content": "space-around"
   });
 
   // cycling through images array //
