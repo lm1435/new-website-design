@@ -113,45 +113,55 @@ function cssMedium (name) {
   }
 }
 
-$(".jamaica").one('click', function(e){
-  e.preventDefault();
-  for (var i = 0; i<jamaicaImg.length; i++) {
-    var img = $('<img >', {
-      class: "img-responsive",
-      src: jamaicaImg[i]
-    });
-    img.appendTo($("#jamaica"));
-   }
-   css("jamaica");
-   cssSmall("jamaica");
-   cssMedium("jamaica");
- });
+var display="";
+var link = "";
+var idName= "";
 
-$(".philadelphia").one('click', function(e){
-  e.preventDefault();
-  for (var i = 0; i<philadelphiaImg.length; i++) {
-    var img = $('<img >', {
-      class: "img-responsive",
-      src: philadelphiaImg[i]
-    });
-    img.appendTo($("#philadelphia"));
-   }
-   css("philadelphia");
-   cssSmall("philadelphia");
-});
+function imagesChange(link, imageArr, display, idName){
+  $(link).one('click', function(e){
+    e.preventDefault();
+    for (var i = 0; i<imageArr.length; i++) {
+      var img = $('<img >', {
+        class: "img-responsive",
+        src: imageArr[i]
+      });
+      img.appendTo($(display));
+     }
+     css(idName);
+     cssSmall(idName);
+     cssMedium(idName);
+  });
+}
 
-$(".portland").one('click', function(e){
-  e.preventDefault();
-  for (var i = 0; i<portlandImg.length; i++) {
-    var img = $('<img >', {
-      class: "img-responsive",
-      src: portlandImg[i]
-    });
-    img.appendTo($("#portland"));
-   }
-   css("portland");
-   cssSmall("portland");
-});
+imagesChange(".jamaica", jamaicaImg, "#jamaica", "jamaica");
+imagesChange(".portland", portlandImg, "#portland", "portland");
+imagesChange(".philadelphia", philadelphiaImg, "#philadelphia", "philadelphia");
+
+// $(".philadelphia").one('click', function(e){
+//   e.preventDefault();
+//   for (var i = 0; i<philadelphiaImg.length; i++) {
+//     var img = $('<img >', {
+//       class: "img-responsive",
+//       src: philadelphiaImg[i]
+//     });
+//     img.appendTo($("#philadelphia"));
+//    }
+//    css("philadelphia");
+//    cssSmall("philadelphia");
+// });
+//
+// $(".portland").one('click', function(e){
+//   e.preventDefault();
+//   for (var i = 0; i<portlandImg.length; i++) {
+//     var img = $('<img >', {
+//       class: "img-responsive",
+//       src: portlandImg[i]
+//     });
+//     img.appendTo($("#portland"));
+//    }
+//    css("portland");
+//    cssSmall("portland");
+// });
 
 $("#jamaica,#portland,#philadelphia").css({
   margin: "auto",
