@@ -114,9 +114,9 @@ $(document).ready(function () {
   function cssSmall (name) {
     if ($(window).width() < 420){
       $('#' + name).children("img").css({
-          "width": "60vw",
+          "width": "85vw",
           "margin": "auto",
-          "padding": "0"
+          "padding": "2vh auto"
       });
     }
   }
