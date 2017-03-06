@@ -84,9 +84,23 @@ function hide (id) {
   $("#" + id).toggle();
 }
 
-var jamaicaImg = ['img/j5.jpg', 'img/j4.png', 'img/j7.png', 'img/j6.png', 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png'];
+var jamaicaImg = ['img/j5.png', 'img/j4.png', 'img/j7.png', 'img/j6.png', 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png'];
 var portlandImg = ['img/p1.png', 'img/p2.png', 'img/p3.png', 'img/p4.png', 'img/p5.png', 'img/p6.png', 'img/p7.png', 'img/p8.png'];
-var philadelphiaImg = ['img/h1.png', 'img/h2.png', 'img/h3.png', 'img/h4.png', 'img/jh5.png', 'img/h6.png', 'img/h7.png', 'img/h8.png'];
+var philadelphiaImg = ['img/h1.png', 'img/h2.png', 'img/h6.png', 'img/h4.png', 'img/h5.png','img/h3.png', 'img/h7.png', 'img/h8.png'];
+
+function css (name) {
+  $('#' + name).children("img").css({
+      "width": "20%",
+      "margin": "auto 5px"
+  });
+}
+
+function cssSmall () {
+  $('#' + name).children("img").css({
+      "width": "90%",
+      "margin": "auto"
+  });
+}
 
 $(".jamaica").one('click', function(e){
   e.preventDefault();
@@ -97,7 +111,12 @@ $(".jamaica").one('click', function(e){
     });
     img.appendTo($("#jamaica"));
    }
+   css("jamaica");
+   if ($(window).width() < 768){
+     cssSmall("jamaica");
+   }
  });
+
 $(".philadelphia").one('click', function(e){
   e.preventDefault();
   for (var i = 0; i<philadelphiaImg.length; i++) {
@@ -107,7 +126,12 @@ $(".philadelphia").one('click', function(e){
     });
     img.appendTo($("#philadelphia"));
    }
+   css("philadelphia");
+   if ($(window).width() < 768){
+     cssSmall("philadelphia");
+   }
 });
+
 $(".portland").one('click', function(e){
   e.preventDefault();
   for (var i = 0; i<portlandImg.length; i++) {
@@ -117,9 +141,13 @@ $(".portland").one('click', function(e){
     });
     img.appendTo($("#portland"));
    }
+   css("portland");
+   if ($(window).width() < 768){
+     cssSmall("portland");
+   }
 });
+
 $("#jamaica,#portland,#philadelphia").css({
-  width: "80vw",
   margin: "auto",
   display: "-webkit-box",
   "display": "-webkit-flex",
@@ -129,46 +157,32 @@ $("#jamaica,#portland,#philadelphia").css({
   "-ms-flex-wrap": "wrap",
   "flex-wrap": "wrap",
   "justify-content": "space-around",
-  "flex-direction": "row"
-});
-
-$("#jamaica,#portland,#philadelphia").children("img").css({
-  "width": "20%",
-  "margin": "auto 5px"
+  "flex-direction": "row",
+  "background-color": "#d9e1e8"
 });
 
 $(document).ready(function () {
   $(".main-info").hide().slideDown(1500);
   // cycling through images array //
-  var imgArray = new Array();
-  imgArray[0] = new Image();
-  imgArray[0].src = 'img/html5.png';
-  imgArray[1] = new Image();
-  imgArray[1].src = 'img/css.png';
-  imgArray[2] = new Image();
-  imgArray[2].src = 'img/js.png';
-  imgArray[3] = new Image();
-  imgArray[3].src = 'img/jquery.jpg';
-  imgArray[4] = new Image();
-  imgArray[4].src = 'img/bootstrap.png';
-  imgArray[5] = new Image();
-  imgArray[5].src = 'img/rails.png';
-  imgArray[6] = new Image();
-  imgArray[6].src = 'img/gulp.png';
-  imgArray[7] = new Image();
-  imgArray[7].src = 'img/sass.png';
-  imgArray[8] = new Image();
-  imgArray[8].src = 'img/git.png';
-
-  function displayImg(arr) {
+  var imgArray = [
+    'html5.png',
+    'css.png',
+    'js.png',
+    'jquery.jpg',
+    'bootstrap.png',
+    'rails.png',
+    'gulp.png',
+    'sass.png',
+    'git.png'];
+  function displayImg() {
     var i = 0;
     setInterval(function() {
-      $('.images').html(arr[i]);
+      $('.images').attr("src", "img/" + imgArray[i]);
       i++;
       if (i >= imgArray.length) i = 0;
     }, 1200);
   }
-  displayImg(imgArray);
+  displayImg();
 
 
   //smooth scrolling//

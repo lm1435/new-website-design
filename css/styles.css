@@ -220,6 +220,10 @@
       text-decoration: none;
       color: black;
     }
+    /*.totalTrips img {
+      width: 20% !important;
+      margin: auto 5px !important;
+    }*/
 }
 
 @media (min-width:568px) {
