@@ -89,15 +89,15 @@ $(document).ready(function () {
 
   document.getElementById("totalTrips").style.backgroundColor= "#d9e1e8";
 
-  var jamaicaImg = ['img/j5.jpg', 'img/j4.png', 'img/j7.png', 'img/j6.png', 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png'];
-  var portlandImg = ['img/p1.png', 'img/p2.jpeg', 'img/p3.jpeg', 'img/p4.png', 'img/p5.png', 'img/p6.png', 'img/p7.png', 'img/p8.png'];
-  var philadelphiaImg = ['img/h1.png', 'img/h2.png', 'img/h6.png', 'img/h4.png', 'img/h5.png','img/h3.png', 'img/h7.png', 'img/h8.png'];
+  var jamaicaImg = ['img/j5.jpg', 'img/j4.png', 'img/j7.png', 'img/j6.png']; //, 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png']; previous larger array of images
+  var portlandImg = ['img/p5.png', 'img/p6.png', 'img/p2.jpeg', 'img/p8.png']; //'img/p1.png', 'img/p7.png', 'img/p3.jpeg', 'img/p4.png'];
+  var philadelphiaImg = ['img/h5.png','img/h3.png', 'img/h7.png', 'img/h8.png']; //'img/h1.png', 'img/h2.png', 'img/h6.png', 'img/h4.png'];
 
   function css (name) {
     $('#' + name).children("img").css({
         "width": "21vw",
         "margin": "auto",
-        "padding": "5vh 2vw"
+        "padding": "2vh 0"
     });
   }
 
