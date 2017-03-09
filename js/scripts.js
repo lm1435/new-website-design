@@ -96,7 +96,7 @@ $(document).ready(function () {
   function css (name) {
     $('#' + name).children("img").css({
         "width": "21vw",
-        "margin": "auto",
+        "margin": "auto 5vh",
         "padding": "2vh 0"
     });
   }
