@@ -90,12 +90,12 @@
     .circle {
         margin-bottom: 8em
     }
-    .about-us h1,
-    .portfolio h1,
+    .about-us h2,
+    .portfolio h2,
     .contact-header {
         margin-top: 1em;
         text-align: center;
-        padding-top: 2em
+        padding-top: 2em;
     }
     .about-us p {
         margin: auto;
@@ -197,12 +197,15 @@
         background-color: none;
         border-color: none
     }
-    .contact-header h1 {
+    .contact-header h2 {
         color: #fff
     }
     #contactform {
         margin: auto;
         width: 75%
+    }
+    #contactform label {
+      display: none;
     }
     .links {
         padding-top: 1.5em
