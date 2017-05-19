@@ -12,14 +12,14 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/pushy.min.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
 
 <body>
   <header class="site-header push">
     <div class="menu-btn">
-      <img src="img/nav.png" id="nav" alt="navigation icon" />
+      <img src="img/nav.png" id="nav" alt="navigation icon"/>
     </div>
     <div>
       <a href="http://luismeza.io"><img alt="meza brand logo" src="img/logo.png" id="logo"></a>
@@ -29,7 +29,7 @@
     <ul>
       <br>
       <li class="pushy-link">
-        <a href="#container">HOME</a>
+        <a href="#main">HOME</a>
       </li>
       <li class="pushy-link">
         <a href="#about">ABOUT</a>
@@ -47,7 +47,7 @@
   </nav>
   <div class="site-overlay">
   </div>
-  <main class="total-body" id="container">
+  <section class="total-body" id="main">
     <div class="hero-image">
       <div class="main-info">
         <h1>
@@ -60,70 +60,72 @@
       <div class="circle">
         <img src="img/luis.jpg" alt="picture of Luis" class="img-circle img-responsive" />
       </div>
-      <button class="button">
+      <div class="button">
         <a href="#contactform">CONTACT ME</a>
-      </button>
+      </div>
     </div>
-    <section class="about-page" id="about">
-      <h2>
+    <section class="about-page">
+      <div class="about-us" id="about">
+        <h2>
           ABOUT ME
-      </h2>
-      <hr>
-      <p>I love learning new and different approaches to coding problems while drinking a lukewarm cup of coffee. I'm constantly on SlackOverFlow, /r/Frontend and Codecademy picking up new skills and troubleshooting.
-      </p>
-      <br>
-      <p> I love taking hikes on one of the numerous trails in Austin or taking a stroll through the mall while holding my wife's shopping bags. I'm a travel junkie, I love taking trips to explore new places. Most recently it was
-        <a href="javascript:hide('jamaica')" class="jamaica">Jamaica</a>, <a href="Javascript:hide('philadelphia')" class="philadelphia">Philadelphia</a> and <a href="javascript:hide('portland')" class="portland">Portland</a>. Next stop, Hawaii.
-      </p>
-      <div id="totalTrips">
-        <div id="jamaica">
+        </h2>
+        <hr>
+        <p>
+          <br> I love learning new and different approaches to coding problems while drinking a lukewarm cup of coffee. I'm constantly on SlackOverFlow, /r/Frontend and Codecademy picking up new skills and troubleshooting.
+          <br>
+          <br> I love taking hikes on one of the numerous trails in Austin or taking a stroll through the mall while holding my wife's shopping bags. I'm a travel junkie, I love taking trips to explore new places. Most recently it was <a href="javascript:hide('jamaica')"
+            class="jamaica">Jamaica</a>, <a href="Javascript:hide('philadelphia')" class="philadelphia">Philadelphia</a> and <a href="javascript:hide('portland')" class="portland">Portland</a>. Next stop, Hawaii.
+        </p>
+        <div id="totalTrips">
+          <div id="jamaica">
+          </div>
+          <div id="philadelphia">
+          </div>
+          <div id="portland">
+          </div>
         </div>
-        <div id="philadelphia">
-        </div>
-        <div id="portland">
+        <div class="resume">
+          <a target="_blank" role="button" href="/LuisMeza'sResume.pdf">RESUME</a>
         </div>
       </div>
-      <button class="resume">
-        <a target="_blank" role="button" href="/LuisMeza'sResume.pdf">RESUME</a>
-      </button>
       <div class="parent">
-        <section class="responsive">
+        <div class="responsive">
           <img src="img/display.png" class="img-responsive" alt="computer monitor">
           <!-- devices by To Uyen from the Noun Project -->
           <h3>
-            RESPONSIVE DESIGN
-          </h3>
+                RESPONSIVE DESIGN
+                </h3>
           <p>
             Responsiveness is crucial to a better overall user experience this is done using a mobile first design with Bootstrap and Flexbox.
           </p>
-        </section>
-        <section class="languages">
+        </div>
+        <div class="languages">
           <img class="images" alt="rotating images of languages">
           <h3>
-            TECHNOLOGIES
-          </h3>
+                  TECHNOLOGIES
+                </h3>
           <p>
             Knowledge of both front and backend languages and tools: HTML, CSS, JavaScript, JQuery, Gulp, Git, Bootstrap, SCSS/SASS and Ruby On Rails.
           </p>
-        </section>
-        <section class="clean-code">
+        </div>
+        <div class="clean-code">
           <img src="img/screen.png" class="img-responsive" alt="clean code computer screen">
           <!-- coding by Ralf Schmitzer from the Noun Project -->
           <h3>
-            CLEAN D.R.Y. CODE
-          </h3>
+                  CLEAN D.R.Y. CODE
+                </h3>
           <p>
             Writing DRY clean code is imperative for reducing bugs and improving productivity.
           </p>
-        </section>
+        </div>
       </div>
     </section>
     <section class="portfolio" id="projects">
-      <h2>
-          PORTFOLIO
-        </h2>
-      <hr>
-      <div class="parent">
+        <h2>
+                PORTFOLIO
+              </h2>
+        <hr>
+      <div class="parent" id="project">
         <div class="project">
           <a href="https://www.erincondren.com/careers" target="_blank">
             <!-- <a href="http://codepen.io/lm1435/full/PbLrGN/" target="_blank"> incase ec stops hosting/changes the page-->
@@ -180,8 +182,8 @@
       <div id="map"></div>
       <div class="contact-header" id="contact">
         <h2>
-          CONTACT
-        </h2>
+            CONTACT
+          </h2>
         <hr>
       </div>
       <div class="form">
@@ -206,18 +208,18 @@
           &copy; Meza 2017
         </div>
         <div class="social-media">
-          <a target="_blank" href="http://twitter.com/THELuisMeza"><img src="img/twitter.png" class="twitter" alt="twitter logo" /></a>
-          <a target="_blank" href="http://github.com/lm1435"><img src="img/github.png" alt="github logo" /></a>
-          <a target="_blank" href="http://linkedin.com/in/mezaluisadrian"><img src="img/linkedin.png" alt="linkedin logo" /></a>
+          <a target="_blank" href="http://twitter.com/THELuisMeza"><img src="img/twitter.png" class="twitter" alt="twitter logo"/></a>
+          <a target="_blank" href="http://github.com/lm1435"><img src="img/github.png" alt="github logo"/></a>
+          <a target="_blank" href="http://linkedin.com/in/mezaluisadrian"><img src="img/linkedin.png" alt="linkedin logo"/></a>
         </div>
       </div>
     </footer>
-  </main>
+  </section>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="js/pushy.min.js"></script>
   <script src="js/scripts.min.js"></script>
-  <!-- <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAHBoqUIgcGO-G7ckPcxpPhiZI2h-cXGcI&callback=initMap"></script> -->
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAHBoqUIgcGO-G7ckPcxpPhiZI2h-cXGcI&callback=initMap"></script>
 </body>
 
 </html>
