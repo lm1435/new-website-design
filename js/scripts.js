@@ -85,7 +85,7 @@ function hide (id) {
 }
 
 $(document).ready(function () {
-  $(".main-info").hide().slideDown(1500);
+  $(".main-info").hide().delay(500).slideDown(1500);
 
   document.getElementById("totalTrips").style.backgroundColor= "#d9e1e8";
 
