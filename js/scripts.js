@@ -85,7 +85,7 @@ function hide (id) {
 }
 
 $(document).ready(function () {
-  $(".main-info").hide().delay(500).slideDown(1500);
+  $(".main-info").delay(500).hide().slideDown(1500);
 
   document.getElementById("totalTrips").style.backgroundColor= "#d9e1e8";
 
@@ -95,9 +95,9 @@ $(document).ready(function () {
 
   function css (name) {
     $('#' + name).children("img").css({
-        "width": "21vw",
-        "margin": "auto 5vh",
-        "padding": "2vh 0"
+        "width": "20vw",
+        "margin": "auto",
+        "padding": "2vh"
     });
   }
 
@@ -197,6 +197,7 @@ $(document).ready(function () {
     var i = 0;
     setInterval(function() {
       $('.images').attr("src", "img/" + imgArray[i]);
+      $('.images>img').addClass('img-responsive');
       i++;
       if (i >= imgArray.length) i = 0;
     }, 1200);
