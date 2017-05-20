@@ -30,7 +30,8 @@
     .menu-btn {
         cursor: pointer;
         margin-top: 15px;
-        padding-left: 2em
+        padding-left: 2em;
+        width: 3em;
     }
     .hero-image {
         background-image: url(../img/small.jpg);
