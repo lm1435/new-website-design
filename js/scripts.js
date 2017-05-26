@@ -1,5 +1,4 @@
-// Map API //
-// var map;
+
 function initMap(){
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {
@@ -139,7 +138,7 @@ $(document).ready(function () {
   }
 
   (function loopOfTechnology() {
-    var imgArray = ['html5.png', 'css.png', 'js.png', 'jquery.jpg', 'bootstrap.png', 'rails.png', 'gulp.png', 'sass.png', 'git.png'];
+    var imgArray = ['html5.png', 'css.png', 'js.png', 'jquery.jpg', 'bootstrap.png', 'rails.png', 'gulp.png', 'sass.png', 'git.png', 'json.png', 'github_logo.png', 'wordpress.png', 'angular.png'];
     var i = 0;
     setInterval(function() {
       $('.images').attr("src", "img/" + imgArray[i]);
@@ -148,36 +147,9 @@ $(document).ready(function () {
     }, 1200);
   })();
 
-
-  //smooth scrolling//
-  // $('.navbar-nav a').click(function() {
-  //   var $root = $('html, body');
-  //   var href = $.attr(this, 'href');
-  //   $root.animate({
-  //     scrollTop: $(href).offset().top
-  //   }, 500, function() {
-  //     window.location.hash = href;
-  //   });
-  //   return false;
-  // });
-
   // formspree protection from spam //
-
   var contactform = document.getElementById('contactform');
-
   contactform.setAttribute('action', 'https://formspree.io/' + 'luis' +
     'meza01' + '@' + 'gmail' + '.' + 'com');
 
-  // var forms = document.getElementsByTagName('form');
-  //
-  // // var i = 0;
-  // forms.noValidate = true;
-  // forms[i].addEventListener('submit', function(e) {
-  //   //Prevent submission if checkValidity on the form returns false.
-  //   if (!e.target.checkValidity()) {
-  //       e.preventDefault();
-  //       alert('Please fill out the form. Thank you!');
-  //   }
-  // i++;
-  // }, false);
   });
