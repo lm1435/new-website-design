@@ -30,7 +30,8 @@
     .menu-btn {
         cursor: pointer;
         margin-top: 15px;
-        padding-left: 2em
+        padding-left: 2em;
+        width: 3em;
     }
     .hero-image {
         background-image: url(../img/small.jpg);
@@ -38,19 +39,25 @@
         height: 100vh;
         width: auto;
         display: -webkit-box;
-        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center
     }
     .main-info h1,
     .main-info h2 {
         color: #fff;
         font-size: 1.5em;
         font-weight: 400;
-        text-align: center
+        text-align: center;
     }
     .img-circle {
         width: 60%
@@ -97,10 +104,11 @@
     .resume {
         cursor: pointer;
         display: -webkit-box;
-        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin: 2em auto;
         padding: 1em 0;
         width: 0
@@ -109,15 +117,15 @@
         background-color: #000;
         color: #fff
     }
-    .parent {
+    .parent, .parent2 {
         display: -webkit-box;
-        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         padding-bottom: 8em;
     }
     .responsive,
@@ -217,6 +225,15 @@
         text-decoration: underline;
         color: #ff282a;
     }
+    #portland, #jamaica, #philadelphia {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+    }
     .portland:hover,
     .jamaica:hover,
     .philadelphia:hover {
@@ -305,28 +322,24 @@
         right: 0;
         top: 0;
         -webkit-transform: scaleX(0);
-        -moz-transform: scaleX(0);
-        -ms-transform: scaleX(0);
-        -o-transform: scaleX(0);
         transform: scaleX(0);
         -webkit-transform-origin: 0 50%;
-        -moz-transform-origin: 0 50%;
-        -ms-transform-origin: 0 50%;
-        -o-transform-origin: 0 50%;
         transform-origin: 0 50%;
         -webkit-transition: transform .3s ease-out;
-        -moz-transition: transform .3s ease-out;
-        -ms-transition: transform .3s ease-out;
-        -o-transition: transform .3s ease-out;
+        -webkit-transition: -webkit-transform .3s ease-out;
+        transition: -webkit-transform .3s ease-out;
         transition: transform .3s ease-out;
+        transition: transform .3s ease-out, -webkit-transform .3s ease-out;
         z-index: -1
     }
     .button a:hover {
         color: #fff;
-        transition-delay: 80ms
+        -webkit-transition-delay: 80ms;
+                transition-delay: 80ms
     }
     .button:hover:before {
-        transform: scaleX(1)
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1)
     }
     .hovereffect {
         position: relative;
@@ -344,7 +357,9 @@
         top: 10%;
         transform: scale(0, 1);
         -webkit-transition: opacity 0.35s, -webkit-transform .35s;
+        transition: opacity 0.35s, -webkit-transform .35s;
         transition: opacity 0.35s, transform .35s;
+        transition: opacity 0.35s, transform .35s, -webkit-transform .35s;
         -webkit-transform: scale(0, 1);
         -ms-transform: scale(0, 1);
         width: 80%
@@ -353,7 +368,6 @@
         filter: alpha(opacity=100);
         opacity: 1;
         -webkit-transform: scale(1);
-        -ms-transform: scale(1);
         transform: scale(1)
     }
     .hovereffect:hover img {
@@ -372,7 +386,9 @@
         text-transform: uppercase;
         text-align: center;
         -webkit-transition: opacity 0.35s, -webkit-transform .35s;
+        transition: opacity 0.35s, -webkit-transform .35s;
         transition: opacity 0.35s, transform .35s;
+        transition: opacity 0.35s, transform .35s, -webkit-transform .35s;
         -webkit-transform: translate3d(0, -100%, 0);
         transform: translate3d(0, -100%, 0)
     }
@@ -386,8 +402,9 @@
         opacity: 0;
         transform: translate3d(0, 100%, 0);
         -webkit-transition: opacity 0.35s, -webkit-transform .35s;
-        -moz-transition: opacity 0.35s, -webkit-transform .35s;
+        transition: opacity 0.35s, -webkit-transform .35s;
         transition: opacity 0.35s, transform .35s;
+        transition: opacity 0.35s, transform .35s, -webkit-transform .35s;
         -webkit-transform: translate3d(0, 100%, 0);
         -moz-transform: translate3d(0, 100%, 0)
     }
@@ -413,7 +430,7 @@
         width: 50%
     }
     .parent {
-        margin-bottom: 8em
+        margin: 8em 0
     }
 }
 

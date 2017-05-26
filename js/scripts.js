@@ -1,8 +1,7 @@
 // Map API //
-var map;
-
+// var map;
 function initMap(){
-  map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementById('map'), {
     center: {
       lat: 30.257927,
       lng: -97.742520
@@ -80,159 +79,105 @@ function initMap(){
   });
 }
 
-function hide (id) {
-  $("#" + id).toggle();
-}
+$(".main-info").hide();
 
 $(document).ready(function () {
-  $(".main-info").hide().delay(500).slideDown(1500);
 
-  document.getElementById("totalTrips").style.backgroundColor= "#d9e1e8";
+  $(".main-info").delay(500).slideDown(1500);
 
-  var jamaicaImg = ['img/j5.jpg', 'img/j4.png', 'img/j7.png', 'img/j6.png']; //, 'img/j1.png', 'img/j2.png', 'img/j3.png', 'img/j8.png']; previous larger array of images
-  var portlandImg = ['img/p5.png', 'img/p6.png', 'img/p2.jpeg', 'img/p8.png']; //'img/p1.png', 'img/p7.png', 'img/p3.jpeg', 'img/p4.png'];
-  var philadelphiaImg = ['img/h5.png','img/h3.png', 'img/h7.png', 'img/h8.png']; //'img/h1.png', 'img/h2.png', 'img/h6.png', 'img/h4.png'];
+  (function(){
+    var jamaicaImg = ['img/j5.jpg', 'img/j4.png', 'img/j7.png', 'img/j6.png'];
+    var portlandImg = ['img/p5.png', 'img/p6.png', 'img/p2.jpeg', 'img/p8.png'];
+    var philadelphiaImg = ['img/h5.png','img/h3.png', 'img/h7.png', 'img/h8.png'];
 
-  function css (name) {
-    $('#' + name).children("img").css({
+    function createVacationImages(link, arr, display){
+      $(link).one('click', function(e){
+        e.preventDefault();
+        for (var i = 0; i<arr.length; i++) {
+          var img = $('<img >', {
+            src: arr[i],
+            class: "img-responsive"
+          });
+          img.appendTo($(display));
+         }
+         cssVacationImages(display);
+         $(display).hide();
+      });
+    }
+    createVacationImages(".jamaica", jamaicaImg, "#jamaica");
+    createVacationImages(".portland", portlandImg, "#portland");
+    createVacationImages(".philadelphia", philadelphiaImg, "#philadelphia");
+
+    $('.vacation').on('click', function(e){
+      e.preventDefault();
+      var target = $(this).data('for');
+      $("#" + target).toggle();
+    });
+  })();
+
+  function cssVacationImages (name) {
+
+    $(name).children("img").css({
         "width": "20vw",
         "margin": "auto",
-        "padding": "2vh"
+        "padding": "2em"
     });
-  }
 
-  function cssMedium (name) {
     if ($(window).width() < 780){
-      $('#' + name).children("img").css({
-          "width": "35vw",
-          "margin": "auto",
-          "padding": "0"
+      $(name).children("img").css({
+          "width": "40vw",
+          "padding": "0 0 1em 0"
       });
     }
-  }
 
-  function cssSmall (name) {
     if ($(window).width() < 420){
-      $('#' + name).children("img").css({
-          "width": "85vw",
-          "margin": "auto",
-          "padding": "2vh auto"
+      $(name).children("img").css({
+          "width": "auto",
+          "padding": "0 1em"
       });
     }
   }
 
-  var display="";
-  var link = "";
-  var idName= "";
-
-  function imagesChange(link, imageArr, display, idName){
-    $(link).one('click', function(e){
-      e.preventDefault();
-      for (var i = 0; i<imageArr.length; i++) {
-        var img = $('<img >', {
-          src: imageArr[i]
-        });
-        img.appendTo($(display));
-       }
-       css(idName);
-       cssMedium(idName);
-       cssSmall(idName);
-    });
-  }
-
-  imagesChange(".jamaica", jamaicaImg, "#jamaica", "jamaica");
-  imagesChange(".portland", portlandImg, "#portland", "portland");
-  imagesChange(".philadelphia", philadelphiaImg, "#philadelphia", "philadelphia");
-
-  // $(".philadelphia").one('click', function(e){
-  //   e.preventDefault();
-  //   for (var i = 0; i<philadelphiaImg.length; i++) {
-  //     var img = $('<img >', {
-  //       class: "img-responsive",
-  //       src: philadelphiaImg[i]
-  //     });
-  //     img.appendTo($("#philadelphia"));
-  //    }
-  //    css("philadelphia");
-  //    cssSmall("philadelphia");
-  // });
-  //
-  // $(".portland").one('click', function(e){
-  //   e.preventDefault();
-  //   for (var i = 0; i<portlandImg.length; i++) {
-  //     var img = $('<img >', {
-  //       class: "img-responsive",
-  //       src: portlandImg[i]
-  //     });
-  //     img.appendTo($("#portland"));
-  //    }
-  //    css("portland");
-  //    cssSmall("portland");
-  // });
-
-  $("#jamaica,#portland,#philadelphia").css({
-    display: "-webkit-box",
-    "display": "-webkit-flex",
-    "display": "-ms-flexbox",
-    "display": "flex",
-    "-webkit-flex-wrap": "wrap",
-    "-ms-flex-wrap": "wrap",
-    "flex-wrap": "wrap",
-    "justify-content": "space-around"
-  });
-
-  // cycling through images array //
-  var imgArray = [
-    'html5.png',
-    'css.png',
-    'js.png',
-    'jquery.jpg',
-    'bootstrap.png',
-    'rails.png',
-    'gulp.png',
-    'sass.png',
-    'git.png'];
-
-  function displayImg() {
+  (function loopOfTechnology() {
+    var imgArray = ['html5.png', 'css.png', 'js.png', 'jquery.jpg', 'bootstrap.png', 'rails.png', 'gulp.png', 'sass.png', 'git.png'];
     var i = 0;
     setInterval(function() {
       $('.images').attr("src", "img/" + imgArray[i]);
-      $('.images>img').addClass('img-responsive');
       i++;
       if (i >= imgArray.length) i = 0;
     }, 1200);
-  }
-  displayImg();
+  })();
 
 
   //smooth scrolling//
-  var $root = $('html, body');
-  $('.navbar-nav a').click(function() {
-    var href = $.attr(this, 'href');
-    $root.animate({
-      scrollTop: $(href).offset().top
-    }, 500, function() {
-      window.location.hash = href;
-    });
-    return false;
-  });
+  // $('.navbar-nav a').click(function() {
+  //   var $root = $('html, body');
+  //   var href = $.attr(this, 'href');
+  //   $root.animate({
+  //     scrollTop: $(href).offset().top
+  //   }, 500, function() {
+  //     window.location.hash = href;
+  //   });
+  //   return false;
+  // });
 
   // formspree protection from spam //
+
   var contactform = document.getElementById('contactform');
 
   contactform.setAttribute('action', 'https://formspree.io/' + 'luis' +
     'meza01' + '@' + 'gmail' + '.' + 'com');
 
-  var forms = document.getElementsByTagName('form');
-
-  var i = 0;
-  forms[i].noValidate = true;
-  forms[i].addEventListener('submit', function(e) {
-    //Prevent submission if checkValidity on the form returns false.
-    if (!e.target.checkValidity()) {
-        e.preventDefault();
-        alert('Please fill out the form. Thank you!');
-    }
-  i++;
-  }, false);
+  // var forms = document.getElementsByTagName('form');
+  //
+  // // var i = 0;
+  // forms.noValidate = true;
+  // forms[i].addEventListener('submit', function(e) {
+  //   //Prevent submission if checkValidity on the form returns false.
+  //   if (!e.target.checkValidity()) {
+  //       e.preventDefault();
+  //       alert('Please fill out the form. Thank you!');
+  //   }
+  // i++;
+  // }, false);
   });

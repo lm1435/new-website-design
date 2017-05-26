@@ -73,8 +73,8 @@
         <p>
           <br> I love learning new and different approaches to coding problems while drinking a lukewarm cup of coffee. I'm constantly on SlackOverFlow, /r/Frontend and Codecademy picking up new skills and troubleshooting.
           <br>
-          <br> I love taking hikes on one of the numerous trails in Austin or taking a stroll through the mall while holding my wife's shopping bags. I'm a travel junkie, I love taking trips to explore new places. Most recently it was <a href="javascript:hide('jamaica')"
-            class="jamaica">Jamaica</a>, <a href="Javascript:hide('philadelphia')" class="philadelphia">Philadelphia</a> and <a href="javascript:hide('portland')" class="portland">Portland</a>. Next stop, Hawaii.
+          <br> I love taking hikes on one of the numerous trails in Austin or taking a stroll through the mall while holding my wife's shopping bags. I'm a travel junkie, I love taking trips to explore new places. Most recently it was <a href="javascript:void(0)"
+            class="jamaica vacation" data-for="jamaica">Jamaica</a>, <a href="javascript:void(0)" class="philadelphia vacation" data-for="philadelphia">Philadelphia</a> and <a href="javascript:void(0)" class="portland vacation" data-for="portland">Portland</a>. Next stop, Hawaii.
         </p>
         <div id="totalTrips">
           <div id="jamaica">
@@ -179,7 +179,7 @@
       </div>
     </section>
     <footer>
-      <div id="map"></div>
+      <div id="map" alt="google map background"></div>
       <div class="contact-header" id="contact">
         <h2>
             CONTACT
@@ -191,12 +191,12 @@
           <input type="hidden" name="_next" value="http://luismeza.io/thanks.html">
           <input type="hidden" name="_subject" value="luismeza.io contact form">
           <input type="text" name="_gotcha" style="display:none">
-          <label for="name" type="name">Name:</label>
-          <input type="text" minlength="4" placeholder="Your Name" name="name" class="form-control" id="name">
-          <label for="email" type="email">Email:</label>
-          <input required type="email" name="_replyto" minlength="5" placeholder="Your Email" class="form-control" id="email">
-          <label for="message" type="message">Message:</label>
-          <textarea required minlength="15" style="resize:none" cols="40" rows="5" class="form-control" placeholder="Hey, you're awesome I want to hire you!" name="message" id="message-box"></textarea>
+          <label for="name">Name:</label>
+          <input aria-label="Name" type="text" minlength="4" placeholder="Your Name" name="name" class="form-control" id="name">
+          <label for="email">Email:</label>
+          <input aria-label="Email" required type="email" name="_replyto" minlength="5" placeholder="Your Email" class="form-control" id="email">
+          <label for="message">Message:</label>
+          <textarea aria-label="Message" required minlength="15" style="resize:none" cols="40" rows="5" class="form-control" placeholder="Hey, you're awesome I want to hire you!" name="message" id="message-box"></textarea>
           <button type="submit" class="btn btn-success" name="submit" id="submit">
               <img src="img/mail.png" class="img-responsive" alt="mail logo" />
               <!-- paper plane by Dmitry Kovalev from the Noun Project -->
