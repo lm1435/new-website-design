@@ -98,10 +98,32 @@ $(document).ready(function () {
             class: "img-responsive"
           });
           img.appendTo($(display));
-         }
+        }
          cssVacationImages(display);
          $(display).hide();
       });
+      function cssVacationImages (name) {
+
+        $(name).children("img").css({
+            "width": "20vw",
+            "margin": "auto",
+            "padding": "2em"
+        });
+
+        if ($(window).width() < 780){
+          $(name).children("img").css({
+              "width": "40vw",
+              "padding": "0 0 1em 0"
+          });
+        }
+
+        if ($(window).width() < 420){
+          $(name).children("img").css({
+              "width": "auto",
+              "padding": "0 1em"
+          });
+        }
+      }
     }
     createVacationImages(".jamaica", jamaicaImg, "#jamaica");
     createVacationImages(".portland", portlandImg, "#portland");
@@ -113,29 +135,6 @@ $(document).ready(function () {
       $("#" + target).toggle();
     });
   })();
-
-  function cssVacationImages (name) {
-
-    $(name).children("img").css({
-        "width": "20vw",
-        "margin": "auto",
-        "padding": "2em"
-    });
-
-    if ($(window).width() < 780){
-      $(name).children("img").css({
-          "width": "40vw",
-          "padding": "0 0 1em 0"
-      });
-    }
-
-    if ($(window).width() < 420){
-      $(name).children("img").css({
-          "width": "auto",
-          "padding": "0 1em"
-      });
-    }
-  }
 
   (function loopOfTechnology() {
     var imgArray = ['html5.png', 'css.png', 'js.png', 'jquery.jpg', 'bootstrap.png', 'rails.png', 'gulp.png', 'sass.png', 'git.png', 'json.png', 'github_logo.png', 'wordpress.png', 'angular.png'];
